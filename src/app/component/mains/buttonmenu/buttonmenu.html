@@ -1,0 +1,256 @@
+<div class="container mx-auto py-8 px-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+    <div class="splide" #splideTicker>
+        <div class="splide__track">
+            <ul class="splide__list">
+
+                <li (click)="toggledarsh()" class="splide__slide text-center" >
+                    <div class="flex flex-col items-center" >
+                        <svg xmlns="http://www.w3.org/2000/svg" height="27" width="28" viewBox="0 -960 960 960">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#bluePurpleGradient)"
+                                d="M120-840h320v320H120v-320Zm80 80v160-160Zm320-80h320v320H520v-320Zm80 80v160-160ZM120-440h320v320H120v-320Zm80 80v160-160Zm440-80h80v120h120v80H720v120h-80v-120H520v-80h120v-120Zm-40-320v160h160v-160H600Zm-400 0v160h160v-160H200Zm0 400v160h160v-160H200Z" />
+                        </svg>
+
+                        <p class="pt-2 text-sm">Dashboard</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleMatches()">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#1e3a8a" />
+                                    <stop offset="100%" stop-color="#a855f7" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Gradient background box -->
+                            <rect width="100" height="100" rx="15" fill="url(#bluePurpleGradient)" />
+                            <!-- White heart shape -->
+                            <path fill="#ffffff" d="M50,73.6l-5.8-5.2C29.6,55.6,20,46.7,20,35.5C20,28.6,25.6,23,32.5,23c4.4,0,8.6,2.1,11.3,5.4
+    c2.7-3.3,6.9-5.4,11.3-5.4C68.4,23,74,28.6,74,35.5c0,11.2-9.6,20.1-24.2,32.9L50,73.6z" />
+                        </svg>
+
+                        <p class="pt-2 text-sm">Matches</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleExplore()">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#1e3a8a" />
+                                    <stop offset="100%" stop-color="#a855f7" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="100" height="100" rx="15" fill="url(#bluePurpleGradient)" />
+                            <path fill="#ffffff"
+                                d="M65.5 60.5L77 72l-4.5 4.5-11.5-11.5a25 25 0 1 1 4.5-4.5zm-16 0a15 15 0 1 0 0-30 15 15 0 0 0 0 30z" />
+                        </svg>
+
+                        <p class="pt-2 text-sm">Explore</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleMessages()">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="27" width="28" viewBox="0 -960 960 960">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#bluePurpleGradient)"
+                                d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+                        </svg>
+                        <p class="pt-2 text-sm">Messages</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleProfiles()">
+                    <div class="flex flex-col items-center">
+                        <svg class="slider_icon" width="28" height="27" viewBox="0 0 28 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <rect x="0.72876" width="26.7437" height="26.7437" rx="3.56582"
+                                fill="url(#bluePurpleGradient)"></rect>
+                            <path
+                                d="M7.80688 18.0512C7.80688 17.1859 8.15062 16.356 8.76248 15.7442C9.37434 15.1323 10.2042 14.7886 11.0695 14.7886H17.5947C18.46 14.7886 19.2899 15.1323 19.9017 15.7442C20.5136 16.356 20.8573 17.1859 20.8573 18.0512C20.8573 18.4838 20.6854 18.8988 20.3795 19.2047C20.0736 19.5106 19.6587 19.6825 19.226 19.6825H9.43819C9.00554 19.6825 8.59061 19.5106 8.28468 19.2047C7.97875 18.8988 7.80688 18.4838 7.80688 18.0512Z"
+                                fill="white" stroke="white" stroke-width="1.08754" stroke-linejoin="round"></path>
+                            <path
+                                d="M14.3322 11.5262C15.6836 11.5262 16.7792 10.4307 16.7792 9.07928C16.7792 7.72786 15.6836 6.63232 14.3322 6.63232C12.9808 6.63232 11.8853 7.72786 11.8853 9.07928C11.8853 10.4307 12.9808 11.5262 14.3322 11.5262Z"
+                                fill="white" stroke="white" stroke-width="1.08754"></path>
+                        </svg>
+
+
+                        <p class="pt-2 text-sm">Profiles</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleStats()">
+                    <div class="flex flex-col items-center">
+                        <svg class="slider_icon" width="28" height="27" viewBox="0 0 28 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <rect x="0.661865" width="26.7437" height="26.7437" rx="3.56582"
+                                fill="url(#bluePurpleGradient)"></rect>
+                            <rect x="7" y="15" width="3" height="9" fill="white"></rect>
+                            <rect x="12.5" y="10" width="3" height="14" fill="white"></rect>
+                            <rect x="18" y="7" width="3" height="17" fill="white"></rect>
+                        </svg>
+                        <p class="pt-2 text-sm">Stats</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleLeaderboard()">
+                    <div class="flex flex-col items-center">
+
+
+                        <svg class="slider_icon" width="28" height="27" viewBox="0 0 28 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <rect x="0.661865" width="26.7437" height="26.7437" rx="3.56582"
+                                fill="url(#bluePurpleGradient)"></rect>
+                            <path
+                                d="M14 4.69927L16.4899 10.2187L16.5644 10.3998H16.7582H22.6137L17.835 13.8412L17.6746 13.9649L17.7304 14.1587L19.8674 19.3637L14.8806 16.1117L14.7098 16.0006L14.5391 16.1117L9.55232 19.3637L11.6893 14.1587L11.745 13.9649L11.5847 13.8412L6.80594 10.3998H12.6615H12.8553L12.9298 10.2187L15.4197 4.69927L14 4.69927Z"
+                                fill="white"></path>
+                        </svg>
+                        <p class="pt-2 text-sm">Leaderboard</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleBookings()">
+                    <div class="flex flex-col items-center">
+                        <svg class="slider_icon" width="28" height="27" viewBox="0 0 28 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <rect x="0.661865" width="26.7437" height="26.7437" rx="3.56582"
+                                fill="url(#bluePurpleGradient)"></rect>
+                            <path
+                                d="M12.8152 10.1129V6.63281L7.73999 12.723L12.8152 18.8132V15.2461C16.4403 15.2461 18.9779 16.6381 20.7904 19.6832C20.0654 15.3331 17.8903 10.983 12.8152 10.1129Z"
+                                fill="white"></path>
+                        </svg>
+                        <p class="pt-2 text-sm">Prior Bookings</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleWorkflows()">
+                    <div class="flex flex-col items-center">
+                        <svg class="slider_icon" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <rect width="26.7437" height="26.7437" rx="3.56582" fill="url(#bluePurpleGradient)"></rect>
+                            <path
+                                d="M12.435 17.1644L12.4804 17.5165L12.6895 19.139H14.5168L14.7262 17.5024L14.7706 17.1556L15.1047 17.0521C15.3196 16.9855 15.5277 16.8945 15.7295 16.7783L16.0008 17.2496M12.435 17.1644L17.8759 12.8087C17.8806 12.9274 17.8829 13.0437 17.8829 13.1575C17.8829 13.2542 17.8787 13.3584 17.8697 13.4703L17.8696 13.4726C17.8622 13.5699 17.8441 13.6992 17.8122 13.8641L17.7466 14.2034L18.0259 14.4069L19.3763 15.3906L18.4764 16.9139L16.9122 16.2599L16.6115 16.1342L16.3589 16.3402C16.1468 16.5131 15.9368 16.6587 15.7291 16.7786L16.0008 17.2496M12.435 17.1644L12.0944 17.0643C11.9006 17.0073 11.6786 16.9142 11.4271 16.7785C11.1785 16.6441 10.978 16.5061 10.82 16.3671L10.5659 16.1436L10.2532 16.2729L8.69842 16.9156L7.79689 15.3896L9.11992 14.4206L9.39 14.2228L9.33501 13.8926C9.31508 13.7729 9.29842 13.649 9.2851 13.5207C9.27292 13.3992 9.267 13.2828 9.267 13.1713C9.267 13.0701 9.2728 12.9609 9.285 12.8431C9.29828 12.7151 9.31577 12.5692 9.33764 12.4049L9.38021 12.0851L9.11992 11.8945L7.79896 10.927L8.69691 9.42485L10.2406 10.0573L10.5384 10.1794L10.7887 9.97697C10.9866 9.81689 11.2021 9.67149 11.4358 9.54102L11.4366 9.54059C11.6685 9.4106 11.8876 9.31395 12.0941 9.24724L12.4199 9.14197L12.4657 8.80269L12.6857 7.17609H14.5168L14.7262 8.81262L14.7693 9.14934L15.0908 9.25849C15.3495 9.34632 15.5688 9.4444 15.7522 9.55025L15.7527 9.55052C15.9431 9.66019 16.1452 9.80071 16.3589 9.97488L16.6065 10.1768L16.9035 10.0587L18.5073 9.4207M12.435 17.1644L18.5073 9.4207M16.0008 17.2496C16.2362 17.1137 16.4701 16.9511 16.7025 16.7616L14.9954 19.6827L15.2656 17.5715C15.5199 17.4927 15.765 17.3854 16.0008 17.2496ZM18.3506 12.3752L20.1285 11.0731L18.7365 8.74432L18.3506 12.3752ZM18.3506 12.3752C18.3914 12.5251 18.4143 12.6623 18.4192 12.787C18.4242 12.9127 18.4267 13.0362 18.4267 13.1575C18.4267 13.2702 18.4217 13.3888 18.4118 13.5135M18.3506 12.3752L18.4118 13.5135M18.5073 9.4207L19.4077 10.927L18.0293 11.9365L17.7277 12.1574L17.8259 12.5181C17.8584 12.6375 17.8729 12.7334 17.8759 12.8086L18.5073 9.4207ZM18.4118 13.5135C18.4023 13.6387 18.3804 13.79 18.3461 13.9674L18.4118 13.5135ZM13.5832 15.5139C14.2401 15.5139 14.8186 15.2865 15.2855 14.8331C15.7529 14.379 15.993 13.8097 15.993 13.1575C15.993 12.5054 15.7529 11.9361 15.2855 11.482C14.8186 11.0286 14.2401 10.8012 13.5832 10.8012C12.9242 10.8012 12.3441 11.028 11.8779 11.4828C11.4121 11.9371 11.1734 12.5061 11.1734 13.1575C11.1734 13.8089 11.4121 14.378 11.8779 14.8323C12.3441 15.2871 12.9242 15.5139 13.5832 15.5139Z"
+                                fill="white" stroke="white" stroke-width="1.08754"></path>
+                        </svg>
+                        <p class="pt-2 text-sm">Workflows</p>
+                    </div>
+                </li>
+
+                <li class="splide__slide text-center" (click)="toggleWelcome()">
+                    <div class="flex flex-col items-center">
+                        <svg class="slider_icon" width="28" height="27" viewBox="0 0 28 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="bluePurpleGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#1e3a8a" /> <!-- blue -->
+                                    <stop offset="100%" stop-color="#a855f7" /> <!-- purple -->
+                                </linearGradient>
+                            </defs>
+                            <rect x="0.661865" width="26.7437" height="26.7437" rx="3.56582"
+                                fill="url(#bluePurpleGradient)"></rect>
+                            <path fill="white" d="M14 8l0 10.5m0 0l-5.5-5.5m5.5 5.5l5.5-5.5" stroke="#fff"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <p class="pt-2 text-sm">Welcome</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="cusomr relative mx-auto mt-24 w-[90%] max-w-6xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] p-[2px] rounded-[50px] bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] shadow-xl transition-transform duration-300 hover:scale-[1.02]">
+  <div class="w-full h-full rounded-[50px] bg-white flex items-center justify-center">
+    <img 
+      src="./Image/image-butt/index_dash.jpg" 
+      alt="Dashboard Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Dashbord"
+    >
+     <img 
+      src="./Image/image-butt/index_matches.jpg" 
+      alt="Matches Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Matches"
+    >
+      <img 
+      src="./Image/image-butt/index_explore.jpg" 
+      alt="Explore Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Explore"
+    >
+       <img 
+      src="./Image/image-butt/index_leaderboard.jpg" 
+      alt="Leaderboard Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Leaderboard"
+    >
+      <img 
+      src="./Image/image-butt/index_messages (1).jpg" 
+      alt="Messages Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Messages"
+    >
+       <img 
+      src="./Image/image-butt/index_profiles.jpg" 
+      alt="Profiles Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Profiles"
+    >
+      <img 
+      src="./Image/image-butt/index_stats.jpg" 
+      alt="Profiles Image" 
+      class="w-full h-full object-cover rounded-lg"
+      *ngIf="Stats">
+
+      
+  </div>
+</div>
+
+<img class="slider_line_abs position-absolute w-[100%]" src="/Image/slider-bottom-lines.webp" alt="lines">
+

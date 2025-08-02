@@ -1,0 +1,26 @@
+.splide {
+  margin-top: 20px;
+    box-shadow: 0 6px 20px #004AAD , 0 6px 20px #CB6CE6;
+}
+
+.splide__slide {
+  
+background-color: transparent;
+  width: 250px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(90deg, #004AAD 0%, #CB6CE6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  gap: 20px;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  padding: 10px;
+}
+
+.splide__slide img {
+  background: linear-gradient(90deg, #004AAD 0%, #CB6CE6 100%);
+  // background-color: #CB6CE6;
+}

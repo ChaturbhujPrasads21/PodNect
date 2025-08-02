@@ -1,0 +1,10 @@
+<div class="splide" #splideTicker  >
+  <div class="splide__track">
+    <ul class="splide__list" >
+      <li class="splide__slide" *ngFor="let feature of features"  >
+        <img [src]="feature.icon" [alt]="feature.name" class="h-10 w-10 mr-2 icons-custome" />
+        {{ feature.name }}
+      </li>
+    </ul>
+  </div>
+</div>

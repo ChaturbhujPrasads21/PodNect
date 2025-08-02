@@ -1,0 +1,84 @@
+.btn-custome {
+  background: linear-gradient(90deg, #004AAD 0%, #CB6CE6 100%);
+  border-radius: 30px;
+  box-shadow: 0 20px 19px rgba(0, 0, 0, 0.2); /* Soft glow */
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.btn-custome:hover {
+    cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.custome-card{
+    border-top-right-radius: 20%;
+
+    border-top-left-radius: 20%;
+       box-shadow: 0 6px 30px #004AAD , 0 6px 30px #CB6CE6;
+}
+.center-card-custoem{
+        box-shadow: 0 6px 30px #004AAD , 0 6px 30px #CB6CE6;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.btn-custome{
+    box-shadow: 0 6px 20px #004AAD;
+}
+
+.text-custome-color{
+ background: linear-gradient(90deg, #004AAD 0%, #CB6CE6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.spin-image {
+  
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotateX(0deg); }
+  100% { transform: rotatey(360deg); }
+}
+
+
+@media (max-width: 768px) {
+  .hero_heading{
+     color: white;
+  }
+  .cutome-box {
+    top: 80px;
+    // padding: 1rem;
+    // border-radius: 12px;
+    // margin: 1rem;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+/* Smooth hover scaling or depth effect */
+.card-hover:hover {
+  transform: rotateY(6deg) rotateX(2deg);
+}
+.perspective-container {
+  perspective: 1000px;
+}
+
+.image-3d-container {
+  transform-style: preserve-3d;
+  animation: rotate3d 6s infinite linear;
+  will-change: transform;
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateX(0deg) rotateX(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateY(360deg) rotateY(360deg);
+  }
+}

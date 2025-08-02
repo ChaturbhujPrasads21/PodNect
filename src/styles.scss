@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+@use "tailwindcss" as *;
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$magenta-palette,
+      tertiary: mat.$violet-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  // color-scheme: light;
+  // background-color: var(--mat-sys-surface);
+  // color: var(--mat-sys-on-surface);
+  // font: var(--mat-sys-body-medium);
+}
+
+html, body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color:var(--background-color) ;
+}
+
+section {
+     padding: 120px 16%;
+}
+
+:root {
+  --background-color:  rgb(231, 230, 230); // Light theme background color
+  --text-color: #191e30; // Light theme text color
+}
+
+[data-theme="dark"] {
+  --background-color: #191e30; // Dark theme background color
+  --text-color: #ffffff; // Dark theme text color
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+body section .full-height {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

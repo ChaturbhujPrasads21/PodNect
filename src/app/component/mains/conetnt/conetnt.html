@@ -1,0 +1,63 @@
+<div class="max-w-4xl w-full mb-12" data-aos="fade-up" data-aos-delay="200">
+
+    <!-- Headline -->
+   <div
+  class="flex flex-wrap justify-center items-center gap-2 text-2xl md:text-3xl font-semibold mb-4"
+  [ngStyle]="{ color: themeService.isDarkTheme ? 'var(--text-color-dark)' : 'var(--text-color-light)' }"
+>
+  <span class="font_3xl lh_128 mb-3 hero_heading text-center">PodNect</span>
+  <img src="/Image/logo (3).png" alt="PodNect Logo" class="h-8 md:h-10 w-auto" />
+  <span class="hero_heading">Instantly Match with</span>
+  <span class="font_3xl lh_128 mb-3 hero_heading mx-auto text-center">
+     the Perfect Podcast <span class="text-custome-color">Hosts & Guests</span> For <span class="text-custome-color">Interviews</span> While Streamlining the Process
+  </span>
+</div>
+
+
+    <!-- Description -->
+    <p class="mb-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        PodNect helps the right podcast guests and hosts connect faster by automating the outreach and scheduling
+        process — so you can focus on what really matters: recording impactful interviews for your audience.
+    </p>
+
+    <!-- CTA Button -->
+    <button
+        class="btn-custome px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600 shadow-lg transition duration-300 ease-in-out">
+        Start Match
+    </button>
+</div>
+
+<!-- Cards Section -->
+<div class="flex flex-col md:flex-row items-center justify-center gap-8" >
+
+    <!-- Left Card -->
+    <div class="relative bg-white  overflow-hidden shadow-lg hover:scale-[1.04] transition-transform duration-300
+ custome-card" data-aos="fade-left" data-aos-delay="300">
+        <img src="/Image/Screenshot 2025-07-26 151111.jpg" alt="Host" class="h-80 w-60 object-cover " />
+        <!-- Floating badge -->
+
+    </div>
+
+    <!-- Center Mic Logo -->
+    <div data-aos="fade-down" data-aos-delay="400"
+  class="h-80 w-60 bg-gradient-to-b from-blue-600 to-purple-500 hover:scale-[1.04] transition-transform duration-300 transform translate-y-20 flex items-center justify-center relative center-card-custoem perspective-container">
+<div class="image-3d-container">
+    <img src="/Image/micro.png" alt="Mic" class="h-40 w-40 spin-3d" />
+  </div>
+
+        <div class="absolute bottom-75 left-1/2 -translate-x-1/2 bg-pink-100 p-7 rounded-full">
+            <img src="/Image/Untitled_design__2_-removebg-preview.png" alt="Headphones" class="w-13 h-13 " />
+        </div>
+    </div>
+
+
+
+    <!-- Right Card -->
+    <div class="relative bg-white hover:scale-[1.04] transition-transform duration-300 overflow-hidden shadow-lg custome-card cutome-box" data-aos="fade-right" data-aos-delay="500">
+        <img src="/Image/home page .jpg" alt="Guest" class="h-80 w-60 object-cover " />
+        <!-- Audio Player -->
+
+    </div>
+
+</div>
+
