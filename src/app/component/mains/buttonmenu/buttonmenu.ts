@@ -8,7 +8,7 @@ import Splide from '@splidejs/splide'; @Component({
   styleUrl: './buttonmenu.scss'
 })
 export class Buttonmenu {
-  Dashbord = false;
+  Dashbord = true;
   Explore = false
   Matches = false;
   @ViewChild('splideTicker', { static: false }) splideTicker!: ElementRef;

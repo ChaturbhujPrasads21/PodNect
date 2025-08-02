@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { Conetnt } from "../conetnt/conetnt";
+
 import { Skill } from "../skill/skill";
 import { Buttonmenu } from "../buttonmenu/buttonmenu";
+import { Conetnt } from "../conetnt/conetnt";
+
+
 
 @Component({
   selector: 'app-mains',
-  imports: [Conetnt, Skill, Buttonmenu],
+  imports: [Skill, Buttonmenu, Conetnt],
   templateUrl: './mains.html',
   styleUrl: './mains.scss'
 })

@@ -50,14 +50,12 @@
 
 @media (max-width: 768px) {
   .hero_heading{
-     color: white;
+   
+  color: var(--text-color);
   }
   .cutome-box {
     top: 80px;
-    // padding: 1rem;
-    // border-radius: 12px;
-    // margin: 1rem;
-    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
   }
 }
 /* Smooth hover scaling or depth effect */

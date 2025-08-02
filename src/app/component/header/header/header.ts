@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Theams } from '../../../services/bark-ligththem/theams';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { Theams } from '../../../services/bark-ligththem/theams';
   styleUrls: ['./header.scss'],
 })
 export class Header implements OnInit {
+
   isDarkMode = false;
   isMenuOpen = false;
 
@@ -19,7 +21,7 @@ export class Header implements OnInit {
     blog: false,
   };
 
-  constructor(public themeService:Theams,private el: ElementRef) {
+  constructor(public themeService:Theams, private el: ElementRef, public router: Router) {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'dark') {
       this.isDarkMode = true;
@@ -69,4 +71,11 @@ export class Header implements OnInit {
     // Set the new theme
     this.themeService.setTheme(newTheme);
   }
+
+
+
+  // 
+logout(){
+  this.router.navigate(['auth']);
+}
 }
