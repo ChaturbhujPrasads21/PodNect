@@ -1,16 +1,18 @@
-<!-- Role Selection -->
 <div class="mt-4 flex justify-center space-x-4">
   <button 
     *ngFor="let role of roles"
-    class="px-4 py-2 rounded-full border-[#191e30] bg-white text-sm font-semibold hover:bg-gradient-to-r hover:from-[#004AAD] hover:to-[#CB6CE6] hover:text-white transition"
+    class="px-4 py-2 rounded-full border-[#191e30] bg-white text-sm font-semibold
+           hover:bg-gradient-to-r hover:from-[#004AAD] hover:to-[#CB6CE6] hover:text-white
+           transition dark:bg-[#191e30] dark:text-white"
     [class.bg-gradient-to-r]="selectedRole === role"
     [class.from-[#004AAD]]="selectedRole === role"
     [class.to-[#CB6CE6]]="selectedRole === role"
-    [class.text-black]="selectedRole === role"
+    [class.text-white]="selectedRole === role"
     (click)="selectRole(role)">
     {{ role }}
   </button>
 </div>
+
 
 <!-- Role Form -->
 <div class="mt-6">
@@ -18,7 +20,7 @@
     <app-host-signup *ngSwitchCase="'Host'"></app-host-signup>
     <app-guest-signup *ngSwitchCase="'Guest'"></app-guest-signup>
     <app-both-signup *ngSwitchCase="'Both'"></app-both-signup>
-    <app-agencies-signup *ngSwitchCase="'Agencies'"></app-agencies-signup>
+   
     <p *ngSwitchDefault class="text-gray-400 text-sm text-center">
       Please select a role to continue.
     </p>

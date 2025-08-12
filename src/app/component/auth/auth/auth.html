@@ -2,9 +2,15 @@
   <div class="w-full max-w-5xl bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row transition-all duration-500">
 
     <!-- Left Gradient Section -->
-    <div class="hidden md:flex md:flex-col md:justify-center md:items-center w-full md:w-1/2 bg-gradient-to-br from-[#004AAD] to-[#CB6CE6] text-white p-10 relative">
+<div
+  class="hidden md:flex md:flex-col md:justify-center md:items-center w-full md:w-1/2 text-white p-10 relative bg-cover bg-center"
+  style="background-image:url('/Image/Podcast Characters Animation.gif'), linear-gradient(to right, #004AAD, #CB6CE6);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;"
+>
       <div class="text-center">
-        <img src="./Image/logo (2).png" alt="Logo" class="w-16 mx-auto mb-6" />
+        <img src="./Image/logoli.png" alt="Logo" class="w-60 mx-auto mb-6" />
         <h2 class="text-3xl font-bold mb-2 text-white">  {{ isSignup ? 'Begin Your Adventure' : 'Welcome Back' }}</h2>
        <p class="text-sm">
           {{ isSignupVisible ? 'Sign up to create your account' : isLoginVisible ? 'Log in to your account' : 'Sign in to continue access' }}

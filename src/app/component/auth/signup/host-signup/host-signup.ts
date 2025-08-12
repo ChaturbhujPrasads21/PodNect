@@ -19,7 +19,7 @@ export class HostSignup {
     referred: false,
   };
   showPassword = false;
-
+hosts: boolean = false;
   years: number[] = [];
 
   constructor() {
@@ -29,6 +29,11 @@ export class HostSignup {
     }
   }
 
+
+  hostsToggle(){
+    this.hosts=!this.hosts
+    
+  }
   onSubmit() {
     if (this.host.password !== this.host.confirmPassword) {
       alert('Passwords do not match!');

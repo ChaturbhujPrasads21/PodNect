@@ -1,4 +1,4 @@
-<div class="p-5 rounded-xl shadow-md w-full max-w-md mx-auto min-h-[500px] bg-transparent flex flex-col justify-center">
+<div class="p-5 rounded-xl  w-full max-w-md mx-auto min-h-[500px] bg-transparent flex flex-col justify-center">
 
   <form (ngSubmit)="onLogin()" #form="ngForm" autocomplete="off" novalidate>
 
@@ -47,7 +47,7 @@
     <button
       type="submit"
       [disabled]="form.invalid"
-      class="btn-custome block mx-auto px-40 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600 shadow-lg transition duration-300 ease-in-out"
+  class="btn-custome block mx-auto w-full sm:w-auto px-6 sm:px-12 md:px-20 lg:px-40 py-3 text-base sm:text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600 shadow-lg transition duration-300 ease-in-out"
     >
       Log In
     </button>

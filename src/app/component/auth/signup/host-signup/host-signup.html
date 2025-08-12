@@ -1,6 +1,6 @@
-<div class="p-2 rounded-xl shadow-md w-full max-w-md mx-auto h-auto tranprarent">
-<div class="p-2 rounded-xl shadow-md w-full max-w-md mx-auto">
-  <h2 class="text-center text-xl font-medium mb-2">Welcome To</h2>
+<div class="p-2 rounded-xl  w-full max-w-md mx-auto h-auto tranprarent">
+
+  <h2 class="text-center text-xl font-medium mb-2">Welcome To Host</h2>
 
   <form (ngSubmit)="onSubmit()" #form="ngForm" autocomplete="off" novalidate>
 
@@ -45,7 +45,7 @@
     <div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]">
       <input
         type="email"
-        placeholder="Email Address (Must Match Podcast RSS)"
+        placeholder="Confirm Email "
         class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
         name="email"
         [(ngModel)]="host.email"
@@ -91,27 +91,40 @@
         required
       />
     </div>
-
+<div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]" *ngIf="hosts">
+      <input
+        type="email"
+        placeholder="Email Address (Must Match Podcast RSS)"
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="email"
+        [(ngModel)]="host.email"
+        required
+      />
+    </div>
     <!-- Referred Checkbox -->
-    <div class="mb-6 flex items-center">
+    <div class="mb-6 flex items-center" >
       <input
         type="checkbox"
         id="referred"
         name="referred"
+        (click)="hostsToggle()"
         [(ngModel)]="host.referred"
         class="mr-2"
       />
       <label for="referred" class="text-sm">Were You Referred By Someone To PodMatch?</label>
     </div>
 
+       
+
     <!-- Submit Button -->
-    <button
-      type="submit"
-      [disabled]="form.invalid"
-      class="btn-custome block mx-auto px-40 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600 shadow-lg transition duration-300 ease-in-out"
-    >
-      Submit
-    </button>
+ <button
+  type="submit"
+  [disabled]="form.invalid"
+  class="btn-custome block mx-auto w-full sm:w-auto px-6 sm:px-12 md:px-20 lg:px-40 py-3 text-base sm:text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600 shadow-lg transition duration-300 ease-in-out"
+>
+  Submit
+</button>
+
   </form>
 </div>
 
@@ -119,4 +132,4 @@
 
 
 
-</div>
+

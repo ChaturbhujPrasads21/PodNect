@@ -1,1 +1,135 @@
-<p>both-signup works!</p>
+<div class="p-2 rounded-xl  w-full max-w-md mx-auto h-auto tranprarent">
+
+  <h2 class="text-center text-xl font-medium mb-2">Welcome To Both</h2>
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm" autocomplete="off" novalidate>
+
+    <!-- First & Last Name -->
+    <div class="flex space-x-4 mb-4">
+      <div class="p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)] w-1/2">
+        <input
+          type="text"
+          placeholder="First Name"
+          class="w-full px-4 py-2 rounded-md bg-white focus:outline-none"
+          name="firstName"
+          [(ngModel)]="host.firstName"
+          required
+        />
+      </div>
+      <div class="p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)] w-1/2">
+        <input
+          type="text"
+          placeholder="Last Name"
+          class="w-full px-4 py-2 rounded-md bg-white focus:outline-none"
+          name="lastName"
+          [(ngModel)]="host.lastName"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- Year of Birth Dropdown -->
+    <div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]">
+      <select
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="yearOfBirth"
+        [(ngModel)]="host.yearOfBirth"
+        required
+      >
+        <option value="" disabled selected>Select Year of Birth</option>
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]">
+      <input
+        type="email"
+        placeholder="Confirm Email "
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="email"
+        [(ngModel)]="host.email"
+        required
+      />
+    </div>
+
+    <!-- Podcast Name -->
+    <div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]">
+      <input
+        type="text"
+        placeholder="Podcast Name (As It Appears In Apple)"
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="podcastName"
+        [(ngModel)]="host.podcastName"
+        required
+      />
+    </div>
+
+    <!-- Password -->
+    <div class="mb-4 relative p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]">
+      <input
+        [type]="showPassword ? 'text' : 'password'"
+        placeholder="Password"
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="password"
+        [(ngModel)]="host.password"
+        required
+      />
+      <button type="button" (click)="showPassword = !showPassword" class="absolute right-3 top-2.5 text-gray-500">
+        👁️
+      </button>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]">
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="confirmPassword"
+        [(ngModel)]="host.confirmPassword"
+        required
+      />
+    </div>
+<div class="mb-4 p-[2px] rounded-md bg-[linear-gradient(90deg,_#004AAD_0%,_#CB6CE6_100%)]" *ngIf="hosts">
+      <input
+        type="email"
+        placeholder="Email Address (Must Match Podcast RSS)"
+        class="w-full px-4 py-2 bg-white rounded-md focus:outline-none"
+        name="email"
+        [(ngModel)]="host.email"
+        required
+      />
+    </div>
+    <!-- Referred Checkbox -->
+    <div class="mb-6 flex items-center" >
+      <input
+        type="checkbox"
+        id="referred"
+        name="referred"
+        (click)="hostsToggle()"
+        [(ngModel)]="host.referred"
+        class="mr-2"
+      />
+      <label for="referred" class="text-sm">Were You Referred By Someone To PodMatch?</label>
+    </div>
+
+       
+
+    <!-- Submit Button -->
+   <button
+  type="submit"
+  [disabled]="form.invalid"
+  class="btn-custome block mx-auto w-full sm:w-auto px-6 sm:px-12 md:px-20 lg:px-40 py-3 text-base sm:text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600 shadow-lg transition duration-300 ease-in-out"
+>
+  Submit
+</button>
+
+  </form>
+</div>
+
+
+
+
+
+
