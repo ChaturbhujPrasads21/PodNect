@@ -36,15 +36,16 @@ export class Buttonmenu {
   Leaderboard = false;
   Profiles = false;
   Stats = false;
-  toggledarsh() { this.Dashbord = true; this.Matches = false; this.Explore = false; this.Leaderboard = false; this.Messages = false; this.Profiles = false; this.Stats = false; }
-  toggleMatches() { this.Matches = true; this.Dashbord = false; this.Explore = false; this.Leaderboard = false; this.Messages = false; this.Stats = false; this.Profiles = false; }
-  toggleExplore() { this.Explore = true; this.Matches = false; this.Dashbord = false; this.Leaderboard = false; this.Messages = false; this.Stats = false; this.Profiles = false; }
-  toggleMessages() { this.Messages = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Leaderboard = false; this.Stats = false; this.Profiles = false; }
-  toggleProfiles() { this.Profiles = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Messages = false; this.Stats = false; this.Leaderboard = false; }
-  toggleStats() { this.Stats = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Messages = false; this.Profiles = false; this.Leaderboard = false; }
-  toggleLeaderboard() { this.Leaderboard = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Messages = false; this.Stats = false; this.Profiles = false; }
+  Welcome = false;
+  toggledarsh() { this.Dashbord = true; this.Matches = false; this.Explore = false; this.Leaderboard = false; this.Messages = false; this.Profiles = false; this.Stats = false; this.Welcome = false; }
+  toggleMatches() { this.Matches = true; this.Dashbord = false; this.Explore = false; this.Leaderboard = false; this.Messages = false; this.Stats = false; this.Profiles = false; this.Welcome = false; }
+  toggleExplore() { this.Explore = true; this.Matches = false; this.Dashbord = false; this.Leaderboard = false; this.Messages = false; this.Stats = false; this.Profiles = false; this.Welcome = false; }
+  toggleMessages() { this.Messages = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Leaderboard = false; this.Stats = false; this.Profiles = false; this.Welcome = false; }
+  toggleProfiles() { this.Profiles = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Messages = false; this.Stats = false; this.Leaderboard = false; this.Welcome = false; }
+  toggleStats() { this.Stats = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Messages = false; this.Profiles = false; this.Leaderboard = false; this.Welcome = false; }
+  toggleLeaderboard() { this.Leaderboard = true; this.Matches = false; this.Dashbord = false; this.Explore = false; this.Messages = false; this.Stats = false; this.Profiles = false; this.Welcome = false; }
   toggleBookings() { this.stopScrollAndLog('Prior Bookings'); }
   toggleWorkflows() { this.stopScrollAndLog('Workflows'); }
-  toggleWelcome() { this.stopScrollAndLog('Welcome'); }
+  toggleWelcome() { this.Welcome = true; this.Dashbord = false; this.Matches = false; this.Explore = false; this.Leaderboard = false; this.Messages = false; this.Stats = false; this.Profiles = false; }
 
 }

@@ -1,114 +1,49 @@
-<div class="flex flex-col md:flex-row min-h-screen">
-  <!-- Left: Form Section -->
-  <div class="w-full md:w-1/2 flex flex-col justify-center px-8 py-10 bg-white">
-    <div class="text-center mb-6">
-      <h1 class="text-3xl font-serif font-semibold">Travel Voyanix</h1>
-      <p class="text-sm text-gray-500">Explore More. Experience Life.</p>
+<div class="min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-5xl bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row transition-all duration-500">
+
+    <!-- Left Gradient Section -->
+    <div class="hidden md:flex md:flex-col md:justify-center md:items-center w-full md:w-1/2 bg-gradient-to-br from-[#004AAD] to-[#CB6CE6] text-white p-10 relative">
+      <div class="text-center">
+        <img src="./Image/logo (2).png" alt="Logo" class="w-16 mx-auto mb-6" />
+        <h2 class="text-3xl font-bold mb-2 text-white">  {{ isSignup ? 'Begin Your Adventure' : 'Welcome Back' }}</h2>
+       <p class="text-sm">
+          {{ isSignupVisible ? 'Sign up to create your account' : isLoginVisible ? 'Log in to your account' : 'Sign in to continue access' }}
+        </p>
+      </div>
+      <span class="absolute bottom-5 text-xs">www.yoursite.com</span>
     </div>
 
-    <!-- Toggle Buttons -->
-   <div class="flex justify-center space-x-4 mb-8">
-  <button
-    class="px-4 py-2 rounded border font-medium text-white"
-    [ngClass]="{
-      'bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] text-white border-none': isSignup,
-      'bg-white text-black border': !isSignup
-    }"
-    (click)="isSignup = true"
-  >
-    Sign Up
-  </button>
+    <!-- Right Form Section -->
+    <div class="w-full md:w-1/2 p-8">
+      <!-- Toggle Buttons -->
+      <div class="flex justify-center space-x-4 mb-8">
+        <button class="px-4 py-2 rounded font-medium"
+          [ngStyle]="{
+            background: isSignup ? 'linear-gradient(90deg, #004AAD 0%, #CB6CE6 100%)' : 'white',
+            color: isSignup ? 'white'  : 'black',
+            border: isSignup ? 'none' : '1px solid black'
+          }"
+          (click)="toggleSignup()">
+          Sign Up
+        </button>
 
-  <button
-    class="px-4 py-2 rounded border font-medium text-white"
-    [ngClass]="{
-      'bg-gradient-to-r from-[#004AAD] to-[#CB6CE6] text-white border-none': !isSignup,
-      'bg-white text-black border': isSignup
-    }"
-    (click)="isSignup = false"
-  >
-    Log In
-  </button>
-</div>
-
-
-    <h2 class="text-xl font-bold text-center mb-4">
-      {{ isSignup ? 'Begin Your Adventure' : 'Welcome Back' }}
-    </h2>
-
-    <!-- Social Icons -->
-    <div class="flex justify-center space-x-4 mb-4">
-      <button class="p-2 border rounded w-10 h-10 flex items-center justify-center">
-        <img src="assets/apple.svg" alt="Apple" class="h-5 w-5" />
-      </button>
-      <button class="p-2 border rounded w-10 h-10 flex items-center justify-center">
-        <img src="assets/google.svg" alt="Google" class="h-5 w-5" />
-      </button>
-      <button class="p-2 border rounded w-10 h-10 flex items-center justify-center">
-        <img src="assets/x.svg" alt="X" class="h-5 w-5" />
-      </button>
-    </div>
-
-    <p class="text-center text-gray-500 mb-4">or</p>
-
-    <!-- Form -->
-    <form class="space-y-4">
-      <div *ngIf="isSignup">
-        <input
-          type="text"
-          placeholder="Username"
-          class="w-full border p-2 rounded"
-        />
+        <button class="px-4 py-2 rounded font-medium"
+          [ngStyle]="{
+            background: !isSignup ? 'linear-gradient(90deg, #004AAD 0%, #CB6CE6 100%)' : 'white',
+            color: !isSignup ? 'white' : 'black',
+            border: !isSignup ? 'none' : '1px solid black'
+          }"
+          (click)="toggleLogin()">
+          Log In
+        </button>
       </div>
 
-      <input
-        type="email"
-        placeholder="Email"
-        class="w-full border p-2 rounded"
-      />
-
-      <div class="relative">
-        <input
-          [type]="showPassword ? 'text' : 'password'"
-          placeholder="Password"
-          class="w-full border p-2 rounded pr-10"
-        />
-        <span
-          class="absolute right-3 top-2.5 cursor-pointer text-sm"
-          (click)="showPassword = !showPassword"
-        >
-          {{ showPassword ? '🙈' : '👁️' }}
-        </span>
+      <!-- Slide-In Animation Container -->
+      <div class="transition-all duration-500 ease-in-out">
+        <app-signup *ngIf="isSignupVisible"></app-signup>
+        <app-login *ngIf="isLoginVisible"></app-login>
       </div>
-
-      <div class="flex items-center">
-        <input type="checkbox" id="remember" class="mr-2" />
-        <label for="remember">Remember me</label>
-      </div>
-
-      <button type="submit" class="w-full bg-black text-white py-2 rounded">
-        {{ isSignup ? "Let's Start" : "Log In" }}
-      </button>
-    </form>
-  </div>
-
-  <!-- Right: Image Section -->
-  <div
-    class="hidden md:block md:w-1/2 relative overflow-hidden rounded-tl-[4rem] bg-cover bg-center"
-    style="background-image: url('assets/beach.jpg')"
-  >
-    <div class="absolute top-8 right-8 bg-white p-4 rounded-lg shadow-lg max-w-xs">
-      <h3 class="font-semibold">Travel the World, Your Way!</h3>
-      <p class="text-sm text-gray-600">
-        Explore destinations at your pace, with personalized journeys &
-        unforgettable experiences.
-      </p>
     </div>
-    <div class="absolute bottom-8 right-8 text-white text-right max-w-sm">
-      <h2 class="text-2xl font-bold leading-tight">
-        Explore the World, <br />Beyond Boundaries!
-      </h2>
-      <p class="text-sm mt-1">Start your adventure today!</p>
-    </div>
+
   </div>
 </div>
